@@ -44,7 +44,7 @@ function suma(x, y) {
 function resta(x, y) {
   // Resta "y" de "x" y devuelve el valor
   // Tu código:
-  return y - x;
+  return x - y;
 }
 
 function multiplica(x, y) {
@@ -104,37 +104,44 @@ function esImpar(num) {
   // Devuelve "true" si "num" es impar
   // De lo contrario, devuelve "false"
   // Tu código:
+  return num % 2 == 1;
 }
 
 function elevarAlCuadrado(num) {
   // Devuelve el valor de "num" elevado al cuadrado
   // ojo: No es raiz cuadrada!
   // Tu código:
+  return num ** num;
 }
 
 function elevarAlCubo(num) {
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
+  return num **3;
 }
 
 function elevar(num, exponent) {
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
+  return num ** exponent;
 }
 
 function redondearNumero(num) {
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
+  return Math.round(num);
 }
 
 function redondearHaciaArriba(num) {
   // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
   // Tu código:
+  return Math.ceil(num);
 }
 
 function numeroRandom() {
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
+  return Math.random(0,1);
 }
 
 function esPositivo(numero) {
@@ -144,30 +151,41 @@ function esPositivo(numero) {
   // Si el número es negativo, devolver ---> "Es negativo"
   // Si el número es 0, devuelve false
   // Tu código:
+  if(numero >1){
+    return console.log("Es positivo");
+  }else if (numero <0){
+    return console.log("Es negativo");
+  }else{
+    return false;
+  }
 }
 
 function agregarSimboloExclamacion(str) {
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
   // Ejemplo: "hello world" pasaría a ser "hello world!"
   // Tu código:
+  return str+"!";
 }
 
 function combinarNombres(nombre, apellido) {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Soy", "Cristian" -> "Soy Cristian"
   // Tu código:
+  return nombre +" "+ apellido;
 }
 
 function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Nahuel" -> "Hola Nahuel!"
   // Tu código:
+  return "Hola"+" "+nombre+"!";
 }
 
 function deEuroAdolar(euro) {
   //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
   //como parámetro un número de euros y calcule el cambio en dólares.
   //Escribe tu código aquí:
+  return euro * 1.20;
 }
 
 // ---------- Puntos extra ----------
@@ -175,6 +193,8 @@ function deEuroAdolar(euro) {
 function obtenerAreaRectangulo(alto, ancho) {
   // Retornar el area de un rectángulo teniendo su altura y ancho
   // Tu código:
+  return alto * ancho;
+
 }
 
 function retornarPerimetro(lado) {
