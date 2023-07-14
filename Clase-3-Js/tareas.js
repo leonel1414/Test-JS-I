@@ -173,7 +173,11 @@ function esVerdadero(valor) {
 function tieneTresDigitos(numero) {
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí:
-  
+  if (numero > 100){
+    return true;
+  }else{
+    return false;
+  }
 }
 
 // ---------- Puntos extra ----------
