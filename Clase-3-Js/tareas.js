@@ -189,6 +189,8 @@ function esPrimo(numero) {
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
   // Tu código:
+
+  
 }
 
 function doWhile(numero) {
