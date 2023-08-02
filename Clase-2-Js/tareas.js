@@ -152,9 +152,9 @@ function esPositivo(numero) {
   // Si el número es 0, devuelve false
   // Tu código:
   if(numero >1){
-    return console.log("Es positivo");
+    return "Es positivo";
   }else if (numero <0){
-    return console.log("Es negativo");
+    return "Es negativo";
   }else{
     return false;
   }
