@@ -1,5 +1,7 @@
 // No cambies los nombres de las funciones.
 
+const { returnStatement } = require("@babel/types");
+
 function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un array
   // Tu código:
@@ -131,18 +133,45 @@ function diaDeLaSemana(numeroDeDia) {
   //Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
   //Escribe tu código aquí:
+  if(numeroDeDia === 1 || numeroDeDia === 7){
+    return "Es fin de semana";
+  }else{
+    return "Es dia Laboral";
+  }
 } 
 
 function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
+ 
+  // Convertimos el número entero a cadena (string) para poder verificar el primer dígito.
+  const numeroComoCadena = n.toString();
+
+  // Verificamos si el primer dígito de la cadena es igual a "9".
+  return numeroComoCadena.charAt(0) === "9";
 }
 
 function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí:
+  if (!Array.isArray(arreglo)) {
+    throw new Error("El parámetro debe ser una matriz (array)");
+  }
+
+  if (arreglo.length === 0) {
+    return true; // Si el arreglo está vacío, todos los elementos son iguales (caso trivial).
+  }
+
+  const primerElemento = arreglo[0];
+  for (let i = 1; i < arreglo.length; i++) {
+    if (arreglo[i] !== primerElemento) {
+      return false; // Si encontramos algún elemento distinto al primer elemento, no son todos iguales.
+    }
+  }
+
+  return true;
 } 
 
 function mesesDelAño(array) {
