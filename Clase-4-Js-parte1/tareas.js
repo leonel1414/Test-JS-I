@@ -67,23 +67,63 @@ function agregarNumeros(numeros) {
   // "array" debe ser una matriz de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
+  if (!Array.isArray(numeros)) {
+    throw new Error("El parámetro debe ser una matriz (array) de enteros");
+  }
+  let sum =0;
+ for(i = 0; i<numeros.length; i++){
+  
+  sum+= numeros[i];
+ }
+ return sum;
 }
 
 function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
+  if (!Array.isArray(resultadosTest)) {
+    throw new Error("El parámetro debe ser una matriz (array) de enteros");
+  }
+
+  if (resultadosTest.length === 0) {
+    return 0; // Si la matriz está vacía, el promedio es 0 para evitar división por 0.
+  }
+
+  let suma = 0;
+  for (let i = 0; i < resultadosTest.length; i++) {
+    if (Number.isInteger(resultadosTest[i])) {
+      suma += resultadosTest[i];
+    }
+  }
+
+  const promedio = suma / resultadosTest.length;
+  return promedio;
 }
 
 function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+  let max = 0;
+  for( i = 0; i <numeros.length; i++){
+    if(numeros[i]>max){
+      max = numeros[i]
+    }
+  }
+  return max;
 }
 
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 19.
   //Escribe tu código aquí:
+  let contador = 0;
+  for(i = 0; i < arreglo.length; i++){
+    if(arreglo[i]> 19){
+      contador = contador+1;
+    }
+  }
+  return contador;
 }
 
 function diaDeLaSemana(numeroDeDia) {
