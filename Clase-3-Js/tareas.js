@@ -173,11 +173,7 @@ function esVerdadero(valor) {
 function tieneTresDigitos(numero) {
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí:
-  if (numero > 100){
-    return true;
-  }else{
-    return false;
-  }
+  return numero.toString().length === 3;
 }
 
 // ---------- Puntos extra ----------
@@ -189,8 +185,20 @@ function esPrimo(numero) {
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
   // Tu código:
-
   
+   // Los números 0 y 1 no son considerados primos
+   if (numero <= 1) {
+    return false;
+  }
+
+  // Verificar si el número es divisible por algún otro número menor que él
+  for (let i = 2; i < numero; i++) {
+    if (numero % i === 0) {
+      return false; // Si es divisible por algún otro número, no es primo
+    }
+  }
+
+  return true; // Si no es divisible por ningún otro número, es primo
 }
 
 function doWhile(numero) {
