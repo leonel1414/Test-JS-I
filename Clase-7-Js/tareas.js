@@ -10,4 +10,6 @@ function imprimir() {
     console.log (4);
 }
 
+//Se ejecuta los que no tiene segundos;
+
 imprimir();
