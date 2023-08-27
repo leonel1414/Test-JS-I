@@ -9,7 +9,7 @@ function imprimir() {
     setTimeout(function() {console.log(3); }, 0);
     console.log (4);
 }
-
+//Nuevo
 //Se ejecuta los que no tiene segundos;
 
 imprimir();
